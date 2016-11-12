@@ -1,14 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<f:view contentType="text/html">
+    <h:head  class="head">
+       <link rel="stylesheet" type="text/css" href="CSS/Style.css"/>
+        <f:facet name="first">
+            <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+            <title>Social Night Events</title>
+
+            <h>
+                <p:menubar>
+                 <f:facet name="options">
+                  <p:commandButton  type="button" value="Login" icon="ui-icon-extlink" />
+                 </f:facet>
+                </p:menubar>
+            </h>
+            <h1 >
+                <h:graphicImage value="Images/gif.gif" styleClass="graficImage" /> 
+            </h1>
+        </f:facet>
     </h:head>
-    <h:body>
-        Hello from Facelets
-        <br />
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+    
+    <h:body  >
+        
+   
+        
     </h:body>
+</f:view>
 </html>
 
