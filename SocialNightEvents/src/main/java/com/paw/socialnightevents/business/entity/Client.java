@@ -6,10 +6,13 @@
 package com.paw.socialnightevents.business.entity;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -26,10 +29,20 @@ public class Client implements Serializable {
     
     private String LastName;
     
-    private Long PhoneNumber;
+    private int PhoneNumber;
     
     private String Email;
     
+    @ManyToMany(cascade = CascadeType.ALL)
+    List<Event> eventList;
+
+    public List<Event> getEventList() {
+        return eventList;
+    }
+
+    public void setEventList(List<Event> eventList) {
+        this.eventList = eventList;
+    }
 
      public Long getId() {
         return id;
@@ -55,11 +68,11 @@ public class Client implements Serializable {
         this.LastName = LastName;
     }
 
-    public Long getPhoneNumber() {
+    public int getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(Long PhoneNumber) {
+    public void setPhoneNumber(int PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 

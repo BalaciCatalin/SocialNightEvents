@@ -7,10 +7,13 @@ package com.paw.socialnightevents.business.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import org.primefaces.model.UploadedFile;
 
@@ -21,7 +24,6 @@ import org.primefaces.model.UploadedFile;
 @Entity
 public class Event implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -39,6 +41,18 @@ public class Event implements Serializable {
     
     private UploadedFile Image;
     
+    
+    @ManyToMany(cascade = CascadeType.ALL)
+    List<Client> clientList;
+
+    public List<Client> getClientList() {
+        return clientList;
+    }
+
+    public void setClientList(List<Client> clientList) {
+        this.clientList = clientList;
+    }
+
     
 
     public String getName() {
