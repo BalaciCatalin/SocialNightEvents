@@ -16,18 +16,20 @@
             <h>
                 <p:menubar>
                  <f:facet name="options">
-                  <p:commandButton  type="button" value="Login" icon="ui-icon-extlink" />
+                     <p:commandButton   type="button" value="LogIn" styleClass="buttonLogIn" icon="ui-icon-extlink" onclick="PF('dialogLogIn').show();"/>
                  </f:facet>
                 </p:menubar>
             </h>
             <h1 >
+                <h:graphicImage value="Images/img.png"  styleClass="styleLogoLeft"/> 
                 <h:graphicImage value="Images/gif.gif" styleClass="graficImage" /> 
+                <h:graphicImage value="Images/img.png"  styleClass="styleLogoRight"/> 
             </h1>
         </f:facet>
     </h:head>
     
     <h:body  >
-        
+         <ui:include src="dialogs/login.xhtml" />
    
         
     </h:body>
