@@ -12,7 +12,7 @@ and open the template in the editor.
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
   
-  
+
     <ui:composition>
         <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
         <p:dialog  header="Login" widgetVar="dialogLogIn" resizable="false">
@@ -25,8 +25,7 @@ and open the template in the editor.
             <p:password id="password" value="#{userLoginView.password}" required="true" label="password" />
  
             <f:facet name="footer">
-                <p:commandButton value="Login" update="growl" actionListener="#{userLoginView.login}"
-                                 oncomplete="handleLoginRequest(xhr, status, args)" />
+                <p:commandButton value="Login" update="growl" onclick="location.href='http://localhost:47598/SocialNightEvents/faces/adminPage.xhtml';" oncomplete="handleLoginRequest(xhr, status, args)" />
             </f:facet>  
         </h:panelGrid>
     </p:dialog>

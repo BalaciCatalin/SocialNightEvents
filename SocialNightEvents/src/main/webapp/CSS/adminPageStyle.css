@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2016, 4:36:31 PM
+    Author     : Balaci
+*/
+.styleAdmin{
+   position: fixed;
+   top:600px;
+   left: 450px;
+    
+}
+.styleLogoLeft{
+    
+   position: fixed;
+   top: 200px;
+   left: 150px;
+    
+}
+.styleLogoRight{
+    
+  position: fixed;
+   top: 200px;
+   right: 150px;
+    
+}
+.graficImageAdm{
+    margin-bottom: -7px;
+    margin-top: 0px;
+    height: 450px;
+    width: 800px;
+    border-radius: 8px;
+}
+
+.buttonLogIn .ui-button-text{
+   
+    display : inline-block;
+    font-size: 15px;
+    padding: 1px 25px;
+    text-align: center;
+    display: inline-block;
+   -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    
+    
+}
+.buttonLogIn:hover{
+    background-color: white;
+    color: white;
+}
+ .ui-menubar {
+ 
+     background: #120030;
+     margin-left: 0px;
+     margin-right: 0px;
+     border : none;
+     height: 25px;
+     margin-bottom: -1px;
+     margin-left: -3px;
+     margin-right: -3px;
+     
+}
+
+ h1 {
+    background-color: #120040;
+    margin-top: 0;
+    text-align: center;
+    margin-top: 0px;
+    
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+}

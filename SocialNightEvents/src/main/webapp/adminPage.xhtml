@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<f:view contentType="text/html">
+    <h:head  class="head">
+       <link rel="stylesheet" type="text/css" href="CSS/adminPageStyle.css"/>
+        <f:facet name="first">
+            <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+            <title>Admin</title>
+
+            <h>
+                <p:menubar>
+                 <f:facet name="options">
+                     
+                     <p:commandButton   type="button" value="Events" styleClass="buttonLogIn"  onclick="location.href='http://localhost:47598/SocialNightEvents/faces/EventsPage.xhtml';"/>
+                     <p:commandButton   type="button" value="Locations" styleClass="buttonLogIn"  onclick="location.href='http://localhost:47598/SocialNightEvents/faces/LocationsPage.xhtml';"/>
+                     <p:commandButton   type="button" value="Clients" styleClass="buttonLogIn"  onclick="location.href='http://localhost:47598/SocialNightEvents/faces/ClientsPage.xhtml';"/>
+                     <p:commandButton   type="button" value="LogOut" styleClass="buttonLogIn"  onclick="location.href='http://localhost:47598/SocialNightEvents/';"/>
+                    
+                 </f:facet>
+                </p:menubar>
+            </h>
+            <h1 >
+                <h:graphicImage value="Images/img.png"  styleClass="styleLogoLeft"/> 
+                <h:graphicImage value="Images/gif.gif" styleClass="graficImageAdm" /> 
+                <h:graphicImage value="Images/img.png"  styleClass="styleLogoRight"/> 
+            </h1>
+        </f:facet>
+    </h:head>
+    
+    <h:body  >
+         <ui:include src="dialogs/login.xhtml" />
+   
+         <h:graphicImage value="Images/admin.png" styleClass="styleAdmin"  /> 
+        
+    </h:body>
+</f:view>
+</html>
+
